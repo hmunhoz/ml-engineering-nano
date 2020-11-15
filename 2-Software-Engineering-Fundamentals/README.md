@@ -1,4 +1,4 @@
-## Software Engineering Practices
+## 1. Software Engineering Practices
 
 ### Clean and Modular Code
 - PRODUCTION CODE: software running on production servers
@@ -61,4 +61,13 @@ Try to optimize data types and vectorization of your code. Look for standard imp
 - How to Version Control Your Production Machine Learning Models: https://blog.algorithmia.com/how-to-version-control-your-production-machine-learning-models/
 - Versioning Data Science: https://shuaiw.github.io/2017/07/30/versioning-data-science.html
 
+### Testing
+Testing is essential before deployment. Prevents faulty conclusions or errors before they make a significant impact.
+
+#### Testing in Data Science
+
+
+### Logging
+
+### Code Review
 
