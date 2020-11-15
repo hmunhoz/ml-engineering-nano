@@ -162,8 +162,10 @@ Benefits the whole team to promote good programming practices and prepare code f
 - Keep your comments objective and impersonal
   - ```BAD: I wouldn't groupby genre twice like you did here... Just compute it once and use that for your aggregations.```
   - ```BAD: You create this groupby dataframe twice here. Just compute it once, save it as groupby_genre and then use that to get your average prices and views.```
--   ```GOOD: Can we group by genre at the beginning of the function and then save that as a groupby object? We could then reference that object to get the average prices and views without computing groupby twice.```
+  -   ```GOOD: Can we group by genre at the beginning of the function and then save that as a groupby object? We could then reference that object to get the average prices and views without computing groupby twice.```
 - Provide code examples. Let's say we are reviewing this:
+  - ```BAD: You can do this all in one step by using the pandas str.split method.```
+  - ```GOOD: We can actually simplify this step to the line below using the pandas str.split method. Found this on this stack overflow post: https://stackoverflow.com/questions/14745022/how-to-split-a-column-into-two-columns df['first_name'], df['last_name'] = df['name'].str.split(' ', 1).str```
 ```
 first_names = []
 last_names = []
@@ -176,5 +178,3 @@ for name in enumerate(df.name):
 df['first_name'] = first_names
 df['last_names'] = last_names
 ```
-  - ```BAD: You can do this all in one step by using the pandas str.split method.```
-  - ```GOOD: We can actually simplify this step to the line below using the pandas str.split method. Found this on this stack overflow post: https://stackoverflow.com/questions/14745022/how-to-split-a-column-into-two-columns df['first_name'], df['last_name'] = df['name'].str.split(' ', 1).str```
