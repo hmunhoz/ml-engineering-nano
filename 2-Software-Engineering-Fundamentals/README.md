@@ -2,7 +2,7 @@
 
 ### Clean and Modular Code
 - PRODUCTION CODE: software running on production servers
-- PRODUCTION _QUALITY_ CODE: code that meets expectations regarding reliability, efficiency, etc.
+- PRODUCTION _QUALITY_ CODE: code that meets expectations regarding reliability, scalability, efficiency, etc.
 - CLEAN: readable, simple and concise code.
 - MODULAR: logically separated into modules and functions. Makes code more organized, efficient and reusable.
 - MODULE: a file. Modules allow code to be reused by encapsulating them into files that can be imported into other files.
