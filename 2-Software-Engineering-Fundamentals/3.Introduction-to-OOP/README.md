@@ -52,5 +52,7 @@ Changing values via a method gives you more flexibility in the long-term. What i
 If you changed manually throughout your code, you would have to manually update everything to work with Euros. If you, however, have used methods, all you would have to do is update the method code.
 
 ### Magic Methods
+Magic methods are a way of overriding and customizing some default behavior for python operations. For example, we could edit the ```__add__``` method to correctly add two Gaussian curves together.
 
-Magic methods are a way of overriding some default behavior for python operations. For example, we could edit the ```__add__``` method to correctly add two Gaussian curves together.
+### Inheritance
+Inheritance helps organize code with a more general version of a class (parent) and then specific children. Updates made to a parent class automatically trickles down to its children, and can make object-oriented code more efficient to write.
