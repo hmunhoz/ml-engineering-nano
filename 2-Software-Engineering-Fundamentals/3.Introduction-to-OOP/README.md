@@ -56,3 +56,16 @@ Magic methods are a way of overriding and customizing some default behavior for 
 
 ### Inheritance
 Inheritance helps organize code with a more general version of a class (parent) and then specific children. Updates made to a parent class automatically trickles down to its children, and can make object-oriented code more efficient to write.
+
+### Advanced OOP Topics
+We've been exposed to:
+- classes and objects
+- attributes and methods
+- magic methods
+- inheritance
+
+But there are other interesting topics:
+- [class methods, instance methods and static methods](https://realpython.com/instance-class-and-static-methods-demystified/) - these are different types of methods that can be accessed at the class or object level
+- [class attributes vs instance attributes](https://www.python-course.eu/python3_class_and_instance_attributes.php) - you can also define attributes at the class level or at the instance level
+- [multiple inheritance, mixins](https://easyaspython.com/mixins-for-fun-and-profit-cb9962760556) - A class can inherit from multiple parent classes
+- [Python decorators](https://realpython.com/primer-on-python-decorators/) - Decorators are a short-hand way for using functions inside other functions
