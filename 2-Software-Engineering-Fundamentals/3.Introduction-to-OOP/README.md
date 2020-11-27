@@ -50,3 +50,7 @@ be accessed directly, e.g: ```self._price```.
 There are a few drawbacks to accessing attributes directly instead of writing a method to access such attributes.
 Changing values via a method gives you more flexibility in the long-term. What if the units of measurement change, like the store was originally meant to work in US dollars and now has to handle Euros?
 If you changed manually throughout your code, you would have to manually update everything to work with Euros. If you, however, have used methods, all you would have to do is update the method code.
+
+### Magic Methods
+
+Magic methods are a way of overriding some default behavior for python operations. For example, we could edit the ```__add__``` method to correctly add two Gaussian curves together.
