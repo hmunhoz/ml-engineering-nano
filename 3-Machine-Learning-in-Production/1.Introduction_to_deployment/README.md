@@ -23,6 +23,7 @@ Transforming an _Information Technology (IT) product_ into a _service_.
 
 ### Why would a business decide to use cloud computing?
 Most of the factors related to choosing _cloud computing services_, instead of developing _on-premise IT resources_ are related to **_time_** and **_cost_**.
+
 ![IT Capacity](./images/capacity.png)
 #### Benefits
 1. Reduced Investments and Proportional Costs (providing cost reduction)
