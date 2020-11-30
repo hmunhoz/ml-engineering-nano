@@ -60,7 +60,7 @@ From **_least_** to **_most_** _commonly_ used:
 The **_third_** _method_ that's _most_ similar to what’s used for _deployment_ within **_Amazon’s SageMaker_**.
 
 ### Production Environments
-![Production Environment](./images/production_environment.png)
+![Production Environment](./images/production_enviromnent.png)
 
 ### Rest APIs
 #### Model, Application, and Endpoint
