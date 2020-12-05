@@ -104,3 +104,61 @@ Notice the following regarding the information included in the **_HTTP messages_
   - Often _predictions_ will be returned in _CSV_ or _JSON_ format with a specific _ordering_ of the returned _predictions_ dependent upon the **model** used.
 
 ### Containers
+
+####Model, Application, and Containers
+When we discussed the production environment, it was composed of two primary programs, the **model** and the **application**, that communicate with each other through the **endpoint** (_interface_).
+
+- The **model** is simply the _Python model_ that's created, trained, and evaluated in the **_Modeling_** component of the _machine learning workflow_.
+- The **application** is simply a _web_ or _software application_ that _enables_ the application users to use the _model_ to retrieve _predictions_.
+
+Both the **model** and the **application** require a _computing environment_ so that they can be run and available for use. One way to _create_ and _maintain_ these _computing environments_ is through the use of **_containers_**.
+
+- Specifically, the **model** and the **application** can each be run in a **_container_** _computing environment_. The **_containers_** are created using a **_script_** that contains instructions on which software packages, libraries, and other computing attributes are needed in order to run a _software application_, in our case either the **model** or the **application**.
+
+####Containers Defined
+- A **_container_** can be thought of as a _standardized collection/bundle of software_ that is to be _used_ for the specific purpose of _running an application_.
+
+As stated above **_container_** technology is _used to create_ the **model** and **application** _computational environments_ associated with **_deployment_** in machine learning. A common **container** software is _Docker_. Due to its popularity sometimes _Docker_ is used synonymously with **containers**.
+
+####Containers Explained
+Often to first explain the concept of **_containers_**, people tend to use the analogy of how Docker _containers_ are similar to shipping containers.
+
+- Shipping containers can contain a wide variety of products, from food to computers to cars.
+- The structure of a shipping container provides the ability for it to hold _different types_ of products while making it easy to track, load, unload, and transport products worldwide within a shipping container.
+
+Similarly _Docker_ **_containers_**:
+
+- Can _contain_ **_all_** types of _different_ software.
+- The structure of a _Docker_ **container** enables the **container** to be _created_, _saved_, _used_, and _deleted_ through a set of _common tools_.
+- The _common tool set_ works with **_any_** **container** regardless of the software the **container** contains.
+
+####Container Structure
+The image **below** shows the basic structure of a **container**, you have:
+
+- The underlying _computational infrastructure_ which can be: a cloud provider’s data center, an on-premise data center, or even someone’s local computer.
+- Next, you have an _operating system_ running on this computational infrastructure, this could be the operating system on your local computer.
+- Next, there’s the _container engine_, this could be _Docker_ software running on your local computer. The _container engine_ software enables one to create, save, use, and delete containers; for our example, it could be _Docker_ running on a local computer.
+- The final two layers make up the composition of the _containers_.
+  - The first layer of the container is the _libraries and binaries_ required to launch, run, and maintain the _next_ layer, the _application_ layer.
+- The image **below** shows _three_ containers running _three_ different applications.
+
+This _architecture_ of **containers** provides the following _advantages_:
+
+1. Isolates the application, which _increases_ security.
+
+2. Requires _only_ software needed to run the application, which uses computational resources _more efficiently_ and allows for faster application deployment.
+
+3. Makes application creation, replication, deletion, and maintenance easier and the same across all applications that are deployed using containers.
+
+4. Provides a more simple and secure way to replicate, save, and share containers.
+
+![Container basic structure](./images/containers_basic_structure.png)
+
+As indicated by the **_fourth_** _advantage_ of using **_containers_**, a **_container_** _script file_ is used to create a **_container_**.
+
+- This _text script file_ can easily be shared with others and provides a simple method to _replicate_ a particular **_container_**.
+- This **_container_** _script_ is simply the _instructions_ (_algorithm_) that is used to create a **_container_**; for _Docker_ these **_container_** _scripts_ are referred to as _dockerfiles_.
+
+This is shown with the image **below**, where the **_container_** _engine_ uses a **_container_** _script_ to create a **_container_** for an application to run within. These **_container_** _script files_ can be stored in repositories, which provide a simple means to share and replicate **_containers_**. For _Docker_, the [Docker Hub](https://hub.docker.com/explore/) is the official repository for storing and sharing _dockerfiles_. Here's an example of a [dockerfile](https://github.com/pytorch/pytorch/blob/master/docker/pytorch/Dockerfile) that creates a docker container with Python 3.6 and PyTorch installed.
+
+![Container script](./images/container_script.png)
