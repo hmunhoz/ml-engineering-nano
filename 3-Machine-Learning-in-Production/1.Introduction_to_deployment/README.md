@@ -162,3 +162,70 @@ As indicated by the **_fourth_** _advantage_ of using **_containers_**, a **_con
 This is shown with the image **below**, where the **_container_** _engine_ uses a **_container_** _script_ to create a **_container_** for an application to run within. These **_container_** _script files_ can be stored in repositories, which provide a simple means to share and replicate **_containers_**. For _Docker_, the [Docker Hub](https://hub.docker.com/explore/) is the official repository for storing and sharing _dockerfiles_. Here's an example of a [dockerfile](https://github.com/pytorch/pytorch/blob/master/docker/pytorch/Dockerfile) that creates a docker container with Python 3.6 and PyTorch installed.
 
 ![Container script](./images/container_script.png)
+
+### Characteristics of Deploying and Modeling
+#####Recall that:
+- **_Deployment_** to production can simply be thought of as a _method_ that _integrate_ a machine learning **model** into an _existing_ **production environment** so that the **model** can be used to make _decisions_ or _predictions_ based upon _data_ input into this **model**.
+- Also remember that a **_production environmen_t** can be thought of as a _web_, _mobile_, or _other software_ **application** that is _currently_ being _used_ by _many_ people and must respond _quickly_ to those users’ requests.
+
+Keeping these things in mind, there are a number of _characteristics_ of **deployment** and **modeling** that I’m going to introduce here. These concepts are introduced _now_ to provide you with _familiarity_ with these concepts for when you see them discussed in _future lessons_. Specifically, these concepts are provided as **_features_** that are made easier to use within cloud platforms services than if implemented with your own code.
+
+![mlworkflow-modeling-hyperparameter](./images/mlworkflow-modeling-hyperparameter.png)
+
+####Characteristics of Modeling
+
+#####Hyperparameters
+In machine learning, a **hyperparameter** is a parameter whose value _cannot_ be estimated from the data.
+
+- Specifically, a **hyperparameter** is _not directly_ learned through the estimators; therefore, their value must be _set_ by the model developer.
+- This means that **hyperparameter** _tuning_ for optimization is an **_important part_** of _model training_.
+- Often cloud platform machine learning services provide methods that allow for **automatic hyperparameter** _tuning_ for use with model training.
+
+If the machine learning platform fails to offer an _automatic_ **hyperparameter** option, one option is to use methods from scikit-learn Python library for **hyperparameter** _tuning_. [Scikit-learn](https://scikit-learn.org/stable/) is a free machine learning Python library that includes _methods_ that help with [hyperparameter tuning](https://scikit-learn.org/stable/modules/grid_search.html#).
+
+![mlworkflow-deployment-chars](./images/mlworkflow-deployment-chars.png)
+
+####Characteristics of Deployment
+#####Model Versioning
+One characteristic of deployment is the **version** of the model that is to be deployed.
+- Besides saving the **model version** as a part of a _model’s metadata_ in a database, the _deployment platform_ should allow one to indicate a deployed **model’s version**.
+This will make it easier to maintain, monitor, and update the deployed model.
+
+####Model Monitoring
+Another characteristic of deployment is the ability to easily **monitor** your deployed models.
+- Once a model is deployed you will want to make certain it continues to meet its performance metrics; otherwise, the application may need to be updated with a _better_ performing model.
+
+####Model Updating and Routing
+The ability to easily **update** your deployed model is another characteristic of deployment.
+- If a deployed model is _failing_ to meet its performance metrics, it's likely you will need to **update** this model.
+If there's been a _fundamental change_ in the _data_ that’s being input into the model for predictions; you'll want to **collect** this _input data_ to be used to **update** the model.
+- The _deployment platform_ should support **routing** _differing_ proportions of _user requests_ to the deployed models; to allow _comparison_ of performance between the deployed model _variants_.
+**Routing** in this way allows for a test of a model _performance_ as _compared_ to other model _variants_.
+
+####Model Predictions
+Another characteristic of deployment is the _type_ of **predictions** provided by your deployed model. There are _two common_ types of **predictions**:
+- **On-demand predictions**
+- **Batch predictions**
+
+####On-Demand Predictions
+- **On-demand predictions** might also be called:
+  - online,
+  - real-time, or
+  - synchronous predictions
+- With these type of predictions, one expects:
+  - a low latency of response to each prediction request,
+  - but allows for possibility high variability in request volume.
+- Predictions are returned in the response from the request. Often these requests and responses are done through an API using JSON or XML formatted strings.
+- Each prediction request from the user can contain one or many requests for predictions. Noting that many is limited based upon the size of the data sent as the request. Common cloud platforms **on-demand prediction** request size limits can range from 1.5(ML Engine) to 5 Megabytes (SageMaker).
+**On-demand predictions** are commonly used to provide customers, users, or employees with real-time, online responses based upon a deployed model. Thinking back on our magic eight ball web application example, users of our web application would be making **on-demand prediction** requests.
+
+####Batch Predictions
+- **Batch predictions** might also be _called_:
+  - asynchronous, or
+  - batch-based predictions.
+- With these type of predictions, one _expects_:
+  - _high volume_ of requests with more _periodic submissions_
+  - so _latency_ won’t be an issue.
+- Each batch request will point to specifically _formatted data file_ of requests and will return the predictions to a file. Cloud services **_require_** these files will be _stored_ in the cloud provider’s cloud.
+- Cloud services typically have _limits_ to how much data they can process with each batch request based upon _limits_ they impose on the _size of file_ you can store in their cloud storage service. For example, _Amazon’s SageMaker_ limits batch predictions requests to the size limit they enforce on an object in their S3 storage service.
+**Batch predictions** are _commonly_ used to help make _business decisions_. For example, imagine a business uses a complex model to predict customer satisfaction across a number of their products and they need these _estimates_ for a _weekly_ report. This would require processing customer data through a **batch prediction** request on a _weekly basis_.
