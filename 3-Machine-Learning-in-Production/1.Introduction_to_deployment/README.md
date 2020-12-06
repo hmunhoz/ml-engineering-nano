@@ -275,3 +275,351 @@ Similar to [Amazon's SageMaker](https://aws.amazon.com/sagemaker/) and [Google's
 
 ## Cloud Foundry
 [Cloud Foundry](https://www.cloudfoundry.org/) is an open source cloud application platform that's backed by companies like: Cisco, Google, IBM, Microsoft, SAP, and more. [Cloud Foundry](https://www.cloudfoundry.org/) provides a faster and easier way to build, test, deploy, and scale applications by providing a choice of clouds, developer frameworks, and applications services to it's users. [Cloud Foundry Certified Platforms](https://www.cloudfoundry.org/certified-platforms/) provide a way for an organization to have their cloud applications portable across platforms including [IBM](https://www.ibm.com/cloud/cloud-foundry) and [SAP](https://cloudplatform.sap.com/index.html) cloud platforms.
+
+### Summary
+Let's summarize the ideas covered in this lesson to ensure you are leaving with the **_most_** important parts!
+Specifically in this lesson, we looked at answering the following questions:
+1. What is the **_machine learning workflow_**?
+2. How does **_deployment_** fit into the machine learning workflow?
+3. What is **_cloud computing_**?
+4. Why would we use _cloud computing_ for **_deploying machine learning_** models?
+5. Why isn't **_deployment_** a part of many _machine learning curriculums_?
+6. What does it mean for a model to be **_deployed_**?  
+7. What are the **_crucial characteristics_** associated with **_deploying_** models?      
+8. What are _different_ **_cloud computing platforms_** we might use to **_deploy_** our _machine learning models_?
+
+# Cloud Computing Defined
+
+The following content is **optional**, it's provided to give students a greater understanding of cloud computing if they are interested in learning more.
+
+* * *
+
+## Cloud Computing Defined by Cloud Providers and References
+
+**_Cloud computing_** was first formally defined by the National Institute of Standards and Technology (NIST) using service models, deployment models, and essential characteristics (see **1** in **References**). Using this formal definition, authors Thomas Erl and Michael Kavis explained in more detail cloud computing, its service models, its deployment models, and its essential characteristics in their books (see **2** & **3** in **References**). Cloud providers Amazon, Google, and Microsoft also provide more modern and evolving explanations of cloud computing, its service models, its deployment models, and its essential characteristics (see **4**, **5**, & **6** in **References**). The information found in this section is based upon the materials that we have included in the **References** at the end of this section.
+
+## Defining Cloud Computing
+
+### _Recall_ the Cloud Computing Example
+
+Where we stored our vacation photos in the **_cloud_** using a _cloud storage provider_, like: [Google Drive](https://www.google.com/drive/), [Apple’s iCloud](https://www.apple.com/icloud/), or [Microsoft’s OneDrive](https://onedrive.live.com/about/en-us/), instead of storing them on a _flash drive_.
+
+With this example, we demonstrated that **cloud computing** can simply be thought of as transforming an _Information Technology (IT) product_ into a _service_. With our vacation photos example, we transformed storing photos on an _IT product_, the **_flash drive_**; into storing them _using a service_, like **_Google Drive_**.
+
+The vacation photo example illustrates _how_ **_cloud storage service_** provides the **_benefits_** of making it _easier to access_ and _share_ our photos. In general, most of the factors related to choosing _cloud computing services_, instead of _developing on-premise IT resources_ are associated with **_benefits_** related to **_time_** and **_cost_**.
+
+**Below** we will explain in detail the formal definition of **cloud computing**.
+
+![](./images/nistcloudcomputing.png)
+
+NIST Cloud Computing Definition
+
+In 2011, the National Institute of Standards and Technology (NIST) defined cloud computing using service models, deployment models, and essential characteristics.
+
+While you have already learned that **cloud computing** is thought of as _transforming_ an **_IT product_**, a _flash drive_, into a **_cloud service_**, _Google Drive_; next we take a more detailed look at cloud computing.
+
+## Service Models of Cloud Computing
+
+Let’s begin by discussing the _three_ **_service models_** of cloud computing.
+
+![](./images/nistcloudcomputing-servicemodels.png)
+
+NIST Cloud Computing - Service Models
+
+### Software as a Service
+
+Starting with _Software as a Service_, SaaS, we’ll use the following graphic to depict the components that compose each of the three service models. The graphic shows whose responsibility it is to create, customize, and maintain the components. The yellow dashed line in the graphic shows with SaaS, the only customer responsibilities are those attributed to a “user” of the service and all other responsibilities are placed upon the cloud provider.
+
+![](./images/nist-cloudcomputing-servicemodelssaas.png)
+
+Service Models - SaaS
+
+Software as a product is becoming more rare these days. It used to be that productivity software, like Microsoft Office, was loaded from a physical CD; now you can use applications like Google docs to write, edit, share, and store documents using cloud infrastructure.
+
+Google docs is one example of _Software as a Service_. Some other examples of SaaS are email applications like gmail and hotmail, and storage applications like iCloud or OneDrive.
+
+With SaaS, a cloud provider’s application that’s running on cloud infrastructure is provided to customers as a service. The customer’s responsibility is only to maintain their user account which typically includes: registration, login, administration, and customization of the software application they’re using as a service.
+
+### Platform as a Service
+
+With _Platform as a Service_, PaaS, the yellow dashed line demonstrates that the customer gains additional responsibilities that are associated with managing all applications and data, such as including a user interface and dashboard, security, logs, and other features associated to the data and applications.
+
+![](./images/nist-cloudcomputing-servicemodelspaas.png)
+
+Service Models - PaaS
+
+Some examples of _Platform as a Service_, are Heroku and Engine Yard. These services allow users to easily build, host, monitor, and scale their applications using their platform. For example, you might use Heroku to build and host an e-commerce website. Google’s App Engine is a similar PaaS for application development and deployment. The creator of “Angry Birds”, Rovio, used Google App Engine to create an online versions of their game.
+
+With PaaS, the service provided to the customer is the ability to deploy customer-created or customer-acquired applications using the cloud provider’s platform. If you are interested in learning more about Rovio’s story using the _Platform as a Service_, Google App Engine, click on the following [link](https://cloud.google.com/customers/rovio/).
+
+### Infrastructure as a Service
+
+With the service model _Infrastructure as a Service_, IaaS, as shown with the yellow dashed line; the customer has most of the responsibility beyond those associated with running secure data centers and maintaining the hardware and software that enables IaaS.
+
+![](./images/nist-cloudcomputing-servicemodelsiaas.png)
+
+Service Models - IaaS
+
+Some examples of IaaS are Amazon Web Services and Rackspace, which were among the first to offer _Infrastructure as a Service_ that allowed their customers to use virtual machines.
+
+Essentially a virtual machine is similar to a laptop or desktop computer, except it’s offered as a cloud service; requiring the user to login to their virtual machine through an internet connection.
+
+IaaS enables the customer to provisioning computer processing, storage, networks, and other fundamental computing resources, where the consumer can deploy and run software using the provider’s cloud infrastructure.
+
+Although Amazon, Microsoft, and Google all offer IaaS, they also offer other services that fall within the services models Platform and Software "-as-a-service". While you’re likely using “software-as-a-service” for your email, now that you understand the service models, consider expanding your usage of cloud to platform and infrastructure “as-a-service”.
+
+### Service Models Importance
+
+All three service models provide access to greater computing capability and resources for an affordable price.  
+With Google App engine you could build the next popular online game, like Angry Birds, or use Amazon’s Virtual Machine service to have access to a more powerful computer instead of upgrading your own.
+
+# Cloud Computing Explained
+
+The following content is **optional**, it's provided to give students a greater understanding of cloud computing if they are interested in learning more.
+
+* * *
+
+## Cloud Computing Drivers, Benefits, and Risks provided by Cloud Providers and References
+
+The _capacity utilization_ graphic that you will see in this section was originally presented by AWS in 2012 to help explain the benefits of cloud computing. As usage of cloud computing has become more ubiquitous in recent years, cloud providers Amazon, Google, and Microsoft have evolving benefits and improved security within their cloud services (see **3**, **4**, & **5** in **References**). Authors Thomas Erl and Michael Kavis explained in more detail the business drivers, benefits, and risks of cloud computing in their books (see **1** & **2** in **References**). The information found in this section is based upon the materials that we have included in the **References** at the end of this section.
+
+### _Recall_ why businesses decide to use cloud computing
+
+Remember that most of the factors related to choosing _cloud computing services_, instead of _developing on-premise IT resources_ are related to **_time_** and **_cost_**. Below we have an example that explains _why_ startups use cloud services.
+
+Imagine it’s 2010 and you created a photo-sharing application called _Instagram_. Some challenges you face are you have little funding, few employees, and your application will need to scale to meet customer usage. Ideally, your application needs to scale to meet spikes in demand without having to put limits on application usage or the number of supported users. Because you’re unsure about how popular your application will be, you don’t want to spend funding to prepare for users you may not have. Instead, you want to spend those funds on advertising and extra features to attract more users.  
+
+You’ve learned cloud computing provides **_pay-as-you-go_** service (_on-demand self service_), that can be available to anyone with **_wireless or internet connection_** (_broad network access_), and can **_scale up and down rapidly_** (_rapid elasticity_) to meet customer demand easily. These **_features_** of **cloud computing** make using cloud the _obvious_ choice to launch your photo sharing application.
+
+While it may make sense why a startup like Instagram chose to use cloud services, it may be more perplexing why an _established_ organization would consider incorporating cloud services into their infrastructure. Addressing these questions will provide you with information that will guide decisions you will make when **_deploying_** _machine learning models_ within your workplace.
+
+### Capacity Utilization Graph
+
+To understand why an _established_ organization would consider incorporating cloud services into their infrastructure, it’s important to understand the **_capacity utilization over time graph_** below. I’m going to explain this graph in detail to illustrate the business drivers and benefits of cloud computing for both _startups_ and _established_ organizations.
+
+![](./images/capacityutilizationcurve3.png)
+
+Capacity Utilization Graph
+
+#### Axes
+
+Along the y-axis or vertical axis of this graph is **_capacity_**. Capacity can be thought of as a number of IT resources like compute capacity, storage, networking, etc. This **_capacity_** also includes the _costs_ associated with these IT resources. For traditional non-cloud infrastructures, this would include purchase and maintenance of these resources. For cloud infrastructures, this would only include paying for use of these IT services. Along the x-axis or horizontal axis of this graph is **_time_**. Generally, lines plotted on this graph depict **_capacity_** across **_time_**.
+
+#### Lines
+
+For understanding this graph, we are going to return to our Instagram example. Imagine this graph depicts the **_capacity_** needed for Instagram’s photo-sharing application across a period of a few months. The **black** curvy line depicts the _actual customer demand_ for **_capacity_** based upon the customers’ usage of the photo-sharing application. The spikes in demand may indicate increased usage by registered Instagram users. The general rise in the **black** curved line over time indicates an increase in the number of registered users of the Instagram application.
+
+The _dashed_ **blue** line depicts the _predicted customer demand_ for **_capacity_** based upon the predictions Instagram would have made if they would have decided to use traditional non-cloud infrastructure. Instagram would have had to base these predictions on historical data and current trends.
+
+The **blue** _step-like_ line depicts how much **_capacity_** is provided by the _traditional non-cloud infrastructure_ and hardware. If Instagram would have had decided to not use cloud services, this **blue** _step-like_ line would have been the capacity that Instagram would have provided their customers. In this scenario where Instagram is using _traditional infrastructure_, they would have needed to build or purchase their own data center and computing resources to provide capacity for their customers.
+
+The **yellow** curvy line depicts how much **_capacity_** Instagram would provide using _cloud infrastructure_ to meet their customers’ demands for capacity. Notice that using cloud infrastructure will provide automated cloud capacity as a service. This automated cloud capacity enables a company the ability to meet and exceed customer demands, unlike if they had chosen to use _traditional non-cloud infrastructure_.
+
+### Interpretation of Graph
+
+We explain the graph in detail to demonstrate the benefits of cloud infrastructure. With _traditional infrastructure_, it takes a considerable amount of time to predict demand, obtain approval for _capacity_ increase, purchase new resources, and install these resources. The graph below depicts this lag of time with how _traditional infrastructure_ is increased to the level of predicted **_future_** demand. The point select is the time at which they would be able to increase traditional infrastructure again.
+
+If Instagram had decided to use _traditional non-cloud infrastructure_, they would have needed more capital to make the investment in _traditional infrastructure_ and they would have needed to overestimate customer demand for _capacity_. This overestimation of customer _capacity_ provides Instagram with the additional time needed to upgrade _traditional infrastructure_ to meet an increasing customer demand.
+
+#### Wasted Capacity
+
+The **cyan** shaded area in this graph below depicts the amount of **_wasted capacity_** that Instagram would have had with _traditional non-cloud infrastructure_ while they waited for customer demand to meet their _capacity_. Specifically, the **blue** arrow shows the large costs associated with Instagram attempting to answer the variability in their customer demand for capacity by _overestimation_ of demand using _traditional infrastructure_.
+
+![](./images/capacityutilizationcurve-wastedcap4.png)
+
+Capacity Utilization Graph - Wasted Capacity
+
+#### Insufficient Capacity
+
+Due to the lag in time needed to upgrade _traditional infrastructure_, if Instagram failed to _overestimate_ customer demand correctly they run the risk of losing their customers as represented by the **cyan** shaded area in this graph below. This **cyan** shaded area depicts the amount of **_insufficient capacity_** that Instagram would have had with _traditional infrastructure_, once customer demand exceeds their capacity. Specifically, the **cyan** shaded areas represent the costs associated with losing customers due to _failure_ to meet customer demand when the demand exceeds capacity provided by _traditional infrastructure_.
+
+![](./images/capacityutilizationcurve-insufficientcap3.png)
+
+Capacity Utilization Graph - Insufficient Capacity
+
+#### Dynamic Capacity
+
+Understand that with _cloud infrastructure_, one can set _automated triggers_ that will increase or decrease cloud capacity once a certain level customer demand has been reached. If Instagram uses _cloud infrastructure_, they will be able to set _automatic triggers_ so that their cloud capacity always exceeds their customer demand for capacity by a small margin as to avoid having _insufficient capacity_ and losing customers. Specifically, the **yellow** arrow in the graph below shows this ability for _cloud infrastructure_ to automatically meet customer demand. The **cyan** shaded area in this graph below depicts the amount of **_dynamic capacity_** Instagram would need to maintain using _cloud infrastructure_ to guarantee they meet their customers’ demand as to avoid losing customers.
+
+![](./images/capacityutilizationcurve-dynamiccap4.png)
+
+Capacity Utilization Graph - Dynamic Capacity
+
+### Summarizing the Capacity Utilization Graph
+
+Now that we understand this graph, we understand why Instagram or any company would benefit from using cloud infrastructure instead of traditional non-cloud infrastructure with regards to meeting customer demand. This understanding is what drives businesses to consider using cloud computing services.
+
+### Benefits of Cloud Computing
+
+The **_capacity utilization_** graph above was initially used by cloud providers like Amazon to illustrate the **_benefits_** of cloud computing. Summarized below are the **_benefits_** of cloud computing which are often what _drives_ businesses to include cloud services in their IT infrastructure \[**1**\]. These same **_benefits_** are echoed in those provided by cloud providers Amazon ([benefits](https://aws.amazon.com/what-is-cloud-computing/)), Google ([benefits](https://cloud.google.com/what-is-cloud-computing/)), and Microsoft ([benefits](https://azure.microsoft.com/en-us/overview/what-is-cloud-computing/)). Additionally, these **_benefits_** are tightly coupled with what **_drives_** businesses to use cloud computing. In the sections below we explain these benefits and business drivers in greater detail.
+
+#### Benefits
+
+1. Reduced Investments and Proportional Costs (providing cost reduction)  
+
+
+2. Increased Scalability (providing simplified capacity planning)  
+
+
+3. Increased Availability and Reliability (providing organizational agility)  
+
+
+
+#### Reduced Investments and Proportional Costs
+
+Using cloud computing has the benefit of **_reducing investments and having costs proportional_** to the usage of cloud services. Recall that cloud computing provides _on-demand_ access to _pay-as-you-go_ cloud computing services; therefore, reducing the necessity to invest in computational resources that will _not_ be used. Additionally, _pay-as-you-go_ services make using cloud resources proportional to their costs. This is illustrated by how _automated cloud capacity_ can meet actual customer demand without _wasting capacity_ nor having _insufficient capacity_ to meet demand.
+
+The _automated_ cloud capacity that always meets customer demand while minimizing _wasted capacity_, provides _cost savings_. Specifically, cloud computing provides this _direct alignment_ between _cost_ and _performance_, the minimization of _wasted capacity_, and the elimination of _insufficient capacity_ which results in **_cost reduction_**. Additionally, there are also savings in removing the need to spend company resources on _prediction_ of customer demand. This **_cost reduction_** that's associated with the benefit of **_reducing investments and having proportional costs_** is typically considered a business **_driver_** of cloud computing.
+
+#### Increased Scalability
+
+Cloud computing also provides the benefit of **_increased scalability_**. This is also demonstrated by cloud capacity meeting customer demand. Using _automatic triggers_ and the _rapid elasticity_ provided by cloud computing enables consumers the ability to ensure that cloud capacity always **_exceeds_** customer demand by a small margin.
+
+Companies, like Instagram, can utilize these _automated_ features of cloud computing such that they can guarantee they meet their customer demand for _capacity_ while minimizing _wasted capacity_, and reducing the need to spend company resources to _predict_ customer demand. These _automated_ features of cloud computing _simplify_ **_capacity planning_** for a business. This simplification of **_capacity planning_** that's associated with the benefit of **_increased scalability_** is typically considered a business **_driver_** of cloud computing.
+
+#### Increased Availability and Reliability
+
+The final benefit is the **_increased availability and reliability_** provided by cloud computing. While _availability_ and _reliability_ can be provided by traditional infrastructure; these characteristics come natively with the **_automatic_** _on-demand self service_, _broad network access_, and _rapid elasticity_ characteristics of cloud computing. Additionally, cloud providers provide guarantees associated with _availability_ and _reliability_ of their services in their service-level agreement, SLA.
+
+This **_increased availability and reliability_** as depicted by _automated cloud capacity_ (**yellow** curvy line in the capacity utilization graph) illustrates how companies that use cloud computing can better adapt and evolve to respond to changes in customer demand as compared to traditional infrastructure (**blue** step-like line in the capacity utilization graph). This **_increased availability and reliability_** provides a company with **_organizational agility_** that's typically considered a business **_driver_** of cloud computing.
+
+## Risks of Cloud Computing
+
+To understand the **_risks_** of cloud computing, recall the _essential characteristics_ that compose the definition of cloud computing. Below we have also summarized he **_risks_** associated with cloud computing \[**1**\]. Cloud providers don't typically highlight the _risks_ assumed when using their cloud services as they do with the _benefits_, but cloud providers like: Amazon ([security](https://aws.amazon.com/security/introduction-to-cloud-security/)), Google ([security](https://cloud.google.com/security/data-safety/)), and Microsoft ([security](https://www.microsoft.com/en-us/TrustCenter/CloudServices/Azure/default.aspx)) often provide details on security of their cloud services.
+
+It's up to the _cloud user_ to understand the compliance and legal issues associated with housing data within a _cloud provider's_ data center instead of on-premise. The service level agreements (SLA) provided for a cloud service often highlight security responsibilities of the cloud provider and those _assumed_ by the cloud user. Below you will find the risks of cloud computing described in greater detail.
+
+#### Risks
+
+1. (Potential) Increase in Security Vulnerabilities  
+
+
+2. Reduced Operational Governance Control (over cloud resources)  
+
+
+3. Limited Portability Between Cloud Providers  
+
+
+4. Multi-regional Compliance and Legal Issues
+
+#### Increased Security Vulnerabilities
+
+Consider that to have _on-demand self service_ with _broad network access_ and _resource pooling_, one needs to _access_ cloud services through the _internet_. Additionally, when cloud services utilize _resource pooling_, a customer might be using a **_shared_** cloud resource instead of a physically isolated resource. Cloud computing can have the **_risk_** of **_increased security vulnerabilities_**; as compared to traditional infrastructure, which typically involves a direct connection to on-premise infrastructure with isolated resources.
+
+#### Reduced Operational Governance Control
+
+Cloud computing has the **_risk_** of **_reduced operational governance control_** due to the _risks_ associated with how the cloud providers operate their infrastructure and that they required external connections for communication between provider and customer. For example, a _disreputable_ cloud provider could make guarantees in their cloud services’ service-level agreements that they _fail_ to honor; therefore, making their customers **_unknowingly_** more _vulnerable_. Additionally, the cloud providers’ data centers might be located physically located much further from their customers than if their customer had opted to use traditional infrastructure. This _increased_ physical distance could cause _variable latency_ and _bandwidth_ issues.
+
+#### Limited Portability Between Cloud Providers
+
+Another **_risk_** of cloud computing is the **_limited portability between cloud providers_**. The _lack_ of an established industry _standard_ could lead to customer **_dependency_** on particular cloud providers. Think about how difficult it is to share photos from a _Photo Stream_ with those who don’t have iPhones, iPads, or other Apple devices. It’s **not** _impossible_, but it isn’t simple and those without an Apple device _don’t_ get the _same_ functionality as those that have an Apple device. Similar can be said regarding most cloud platforms, it’s **not** _impossible_ to move between cloud providers, but the transfer of data and code might not be seamless and certain providers may offer services of features that aren’t offered by other providers.
+
+#### Multiregional Compliance and Legal Issues
+
+The final **risk** of cloud computing is the **_multiregional compliance and legal issues_** that may result from using cloud computing. Specifically, a cloud provider establishes their data centers in affordable and geographically convenient locations. The _physical location_ of data centers can cause _legal concerns_ connected to industry or _government regulations_ that _specify_ data privacy and storage policy. Additionally, there could be _legal issues_ associated to _accessibility_ and _disclosure_ of data based upon the _country’s laws_ where the data center is located. For example, consider how the General Data Protection Regulation of the European Union is a much stronger data protection and _privacy regulation_than offered by the United States; therefore, US businesses must adhere to these stronger protections if they operate within the countries that are members of the European Union.
+
+# Cloud Computing Guidelines and Examples
+
+## Cloud Computing Guidelines
+
+#### Considerations for Startups
+
+Cloud computing solutions work **_best_** for **startups** that can use cloud infrastructure instead of building their own from scratch. Being able to use cloud infrastructure typically means that a **startup**:
+
+- Has _no_ real infrastructure overhead costs due to the _pay-as-you-go_ and _on-demand_ access that cloud services provide.  
+     
+- Requires _fewer_ staff and _costs less_ to build and maintain their software product or application due to the ease of use and _quick_ startup associated with cloud services as compared to traditional infrastructure.  
+     
+- Has greater _ability_ to scale and meet customer demand for capability more _efficiently_ (less cost, less wasted capacity or insufficient capacity - refer to _Capacity Utilization Curve_ below).  
+     
+- Can get their software product or application _to market_ much more _quickly_.  
+     
+
+![](./images/capacityutilizationcurve3_1.png)
+
+Capacity Utilization Graph
+
+#### Considerations for Established Organizations
+
+For **_established_** **enterprises** and **organizations** with large amounts of infrastructure and legacy architectures already in use, introducing cloud services into their traditional infrastructure _may not_ make sense. Primarily because some of the efficiencies above _do not hold true_ when there is existing computing infrastructure, some of the legacy architectures _might not_ be able to be _integrated_ with cloud services, some of the _risks_ of cloud computing (security, governance, compliance) might outweigh expected the benefits of using cloud computing for the established organization, company culture _might not_ be accepting of replacing traditional infrastructure with cloud, and company employees _may lack_ the skill set to use cloud computing.
+
+## Cloud Computing Successes
+
+Below we have provided examples of four companies (startup and established organizations) that embraced cloud computing to become successful.
+
+#### Instagram
+
+In October 2010, the photo-sharing application called **_Instagram_** launched and:
+
+- within 1 day, it had 25,000 users
+- within 3 months, it had 1 million users
+- within 1 and ½ years, it had close to 30 million users \[**2**\]
+
+Facebook purchased **_Instagram_** for an estimated $1 billion in April 2012 \[**2**\]. By September 2012, **_Instagram_** had 100 million users, just shy of two years after their initial launch \[**2**\]. At the time of **_Instagram’s_** purchase company consisted of 13 employees and over 100 servers running in Amazon’s Web Service, AWS, to support 30 million users \[**2**\].
+
+**_Instagram_** had the luxury of starting from scratch and architecting for the cloud to start. To learn more about how **_Instagram_** migrated to AWS’s Virtual Private Cloud, see [here](https://instagram-engineering.com/migrating-from-aws-to-aws-f4b16a65e13c) - _10 minute read_. To learn more about how **_Instagram_** migrated from AWS data centers to Facebook data centers, see [here](http://instagram-engineering.tumblr.com/post/89992572022/migrating-aws-fb) - _4 minute read_.
+
+#### Netflix
+
+**_Netflix_** is a pioneer in the online video streaming industry. In 2009, 100% of all streaming traffic was run through **_Netflix’s_** own data center \[**2**\]. By end of 2010, most of all that traffic was run through AWS data centers, with a goal of 95% of **all** services run through AWS \[**2**\]. **_Netflix_** made a business decision to move to the Cloud, they hired and trained an incredible engineering team to continue to be pioneers in cloud computing.
+
+To learn more about how **_Netflix_** use of AWS, see [here](https://aws.amazon.com/solutions/case-studies/netflix/) - _two videos 7 minutes total_. To learn more about the open source software that **_Netflix_** developed to run on AWS look [here](https://netflix.github.io/).
+
+#### HSBC Bank
+
+**_HSBC_** is a 150 year old international organization that recently migrated to the Google Cloud Platform. The following [video link](https://www.youtube.com/embed/j_K1YoMHpbk?start=3578&end=4311) is a _12 minute video_ from the Google Cloud Next 2017 Day 1 Keynote address. The moderator is Tariq Shaukat, President for Customer facing Operations at Google Cloud; he introduces Darryl West, the Global Chief Information Officer at **_HSBC_**. Darryl West explains **_HSBC’s_** partnership with Google and their migration to the cloud.
+
+#### eBay
+
+**_eBay_**, the company that facilitates auction style online sales, recently migrated to the Google Cloud Platform. The following [video link](https://www.youtube.com/embed/j_K1YoMHpbk?start=4547&end=4989) is a _7 and ½ video_ from the Google Cloud Next 2017 Day 1 Keynote address. The moderator is Diane Greene, a SVP at Google Cloud; she is speaking with RJ Pittman, the Chief Product Office at **_eBay_**. He describes **_eBay’s_** migration to the cloud.
+
+# Machine Learning Workflow and Cloud Computing
+
+![](./images/mlworkflow-allornocloud.png)
+
+## Cloud Computing within the Machine Learning Workflow
+
+#### Deciding the Amount of Cloud to include within the Workflow
+
+Thinking back on the _Machine Learning Workflow_, one might wonder how this workflow fits within cloud computing services. Cloud computing services can be used for **_all_** _parts_ of the Machine Learning workflow (**_blue_** _enclosed figure_) to _none_ of the parts (**_yellow_** _enclosed figure_) of the _Machine Learning workflow_.
+
+Guiding _how much_ or _how little_ of the machine learning workflow is using cloud computing services are an organization's:
+
+- _Existing_ infrastructure
+- _Vulnerability_ to the _risks_ of cloud computing
+
+Your workplace may have _security_ concerns, concerns regarding _operational governance_ of the cloud services, and/or _compliance and legal_ concerns regarding the use of cloud services. Additionally, your workplace may also have already on-premise infrastructure that supports the machine learning workflow; therefore, making the use of cloud services an _unnecessary_ expenditure.
+
+#### Typical Scenarios
+
+Cloud services like Amazon’s SageMaker can be used for **all** parts of the Machine Learning Workflow (**_blue_** _enclosed figure **above**_); and with subsequent lessons you will be using Amazon's SageMaker in this _all cloud_ scenario. Some users of SageMaker may decide to _Explore and Process Data_ using on-premise (_non-cloud_) resources (**_yellow_** _enclosing the "Explore & Process Data"_ **_below_**).
+
+Cloud services like Google’s Cloud ML Engine are meant to be used primarily for _Modeling_ and _Deployment_. It’s up to the user of Google's ML Engine if they would like to use on-premise (_non-cloud_) resources, Google’s Cloud Dataflow service, or other cloud services for the _Explore and Process Data_ part of the Machine Learning Workflow.
+
+![](./images/mlworkflow-differentcloudservices.png)
+
+Another common way to incorporate cloud into the machine learning workflow is to _only_ use cloud computing services for _Deployment_ (**_blue_** _enclosing the "Deployment"_ **_above_**). This might be a common strategy for organizations that are concerned about protecting the _privacy_ of the data they used to create the model that was deployed. Additionally, organizations might host their web application or software application on cloud assets to allow for greater scalability and availability for less cost as offered by cloud services.
+
+Note that the machine learning workflow and underlying algorithms discussed in the _Deployment_ will be similar regardless if using _on-premise_ or _cloud_ resources.
+
+* * *
+
+### References
+
+Below are links and books that provide more detailed information on the topics discussed in this section **above**.
+
+**1.** **Erl**, T., Mahmood, Z., & Puttini R. (2013). _Cloud Computing: Concepts, Technology, & Architecture._ Upper Saddle River, NJ: Prentice Hall.
+
+- _Chapter 3_: Discusses Business Drivers, Benefits, and Risks of Cloud Computing.
+
+**2.** **Kavis**, M. (2014). _Architecting the Cloud: Design Decisions for Cloud Computing Service Models._ Hoboken, NJ: Wiley.
+
+- _Chapter 1_: Cloud Computing define and early examples of cloud computing that highlight the benefits.
+- _Chapter 3_: Cloud Computing worst practices are discussed to highlight both risks and benefits of cloud computing.
+- _Chapter 9_: Discusses security responsibilities by Service Model.
+
+**3.** [Amazon Web Services](https://aws.amazon.com/) (AWS) discusses some benefits of Cloud Computing [here](https://aws.amazon.com/what-is-cloud-computing/) and security [here](https://aws.amazon.com/what-is-aws/) and [here](https://aws.amazon.com/security/introduction-to-cloud-security/).
+
+**4.** [Google Cloud Platform](https://cloud.google.com/) (GCP) discusses some benefits of Cloud Computing [here](https://cloud.google.com/what-is-cloud-computing/) and security [here](https://cloud.google.com/security/data-safety/).
+
+**5.** [Microsoft Azure](https://azure.microsoft.com/en-us/) (Azure) discusses their some benefits of Cloud Computing [here](https://azure.microsoft.com/en-us/overview/what-is-cloud-computing/) and security [here](https://www.microsoft.com/en-us/trustcenter/cloudservices/azure).
