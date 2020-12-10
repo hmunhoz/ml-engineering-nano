@@ -1,0 +1,3 @@
+[submodule "3-Machine-Learning-in-Production/2.Building_a_Model_using_SageMaker/sagemaker-deployment"]
+	path = 3-Machine-Learning-in-Production/2.Building_a_Model_using_SageMaker/sagemaker-deployment
+	url = https://github.com/udacity/sagemaker-deployment
