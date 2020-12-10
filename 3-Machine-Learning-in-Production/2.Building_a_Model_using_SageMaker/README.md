@@ -57,70 +57,11 @@ Amazon SageMaker offers a variety of instance types. Interestingly, **_the type 
 
 The table below describes the three types of SageMaker instances that you would use in this course:
 
-SageMaker Instance
-
-vCPU
-
-GPU
-
-Mem (GiB)
-
-GPU Mem (GiB)
-
-Network Performance
-
-Usage
-
-Default Quota (Limit)
-
-`ml.t2.medium`
-
-2
-
-\-
-
-4
-
-\-
-
-Low to Moderate
-
-Run notebooks
-
-0 - 20
-
-`ml.m4.xlarge`
-
-4
-
-\-
-
-16
-
-\-
-
-High
-
-- Train and batch transform XGBOOST models;
-- Deploy all models preceding the first project
-
-0 - 20
-
-`ml.p2.xlarge`
-
-4
-
-1xK80
-
-61
-
-12
-
-High
-
-Train and batch transform GPU accelerated Pytorch models for the first project
-
-0 -1
+SageMaker | Instance | vCPU | GPU Mem (GiB) | GPU Mem (GiB) | Network Performance | Usage | Default Quota (Limit)
+--- | --- | --- | --- | --- | --- | --- | ---
+`ml.t2.medium` | 2 | - | 4 | - | Low to Moderate | Run notebooks | 0 - 20
+`ml.m4.xlarge` | 4 | - | 16 | - | High | Train and batch transform XGBOOST models; Deploy all models preceding the first project | 0 - 20
+`ml.p2.xlarge` | 4 | 1xK80 | 61 | 12 | High | Train and batch transform GPU accelerated Pytorch models for the first project | 0 - 1
 
 In this course, the `ml.m4.xlarge` is needed at an early stage, while `ml.p2.xlarge` is needed only when working on the for the first project: Deploying a Sentiment Analysis Model.
 
