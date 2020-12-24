@@ -1,6 +1,8 @@
 ## 1. Software Engineering Practices
+[Introduction](https://youtu.be/z7v7oa--W48)
 
 ### Clean and Modular Code
+[Video](https://youtu.be/RjHV8kRpVbA)
 - PRODUCTION CODE: software running on production servers
 - PRODUCTION _QUALITY_ CODE: code that meets expectations regarding reliability, scalability, efficiency, etc.
 - CLEAN: readable, simple and concise code.
@@ -8,15 +10,16 @@
 - MODULE: a file. Modules allow code to be reused by encapsulating them into files that can be imported into other files.
 
 ### Refactoring Code
-
+[Video](https://youtu.be/9bxtHpPvXE0)
 - *Reestructuring* your internal code without changing its external functionality. Used to _clean_ and _modularize_ your code after it is working.
 - It is not easy to write the best code while creating a prototype. Refactoring is important and will make you a better developer in the long run.
 
 ### Writing Clean Code
+[Video](https://youtu.be/wNaiahWCwkQ)
 
 #### Choosing good names
 
-- **Be descriptive and imply type**: for booleans, use the prefix ```is_``	 or ```has_``` to make it clear it is a condition. You can use verbs for function names or nouns for variables.
+- **Be descriptive and imply type**: for booleans, use the prefix ```is_```	 or ```has_``` to make it clear it is a condition. You can use verbs for function names or nouns for variables.
 - **Be consistent but clearly differentiate**: ```age_list``` and ```age``` is easier to differentiate than ```ages``` and ```age```.
 - **Avoid single letters and abbreviations**: except (maybe) for counters and math expressions (e.g. x and y)
 - **Long names != descriptive names**: You should be descriptive, but only with relevant information. E.g. good functions names describe what they do well without including details about implementation or highly specific uses.
@@ -28,6 +31,7 @@
 - Follow [PEP 8](https://www.python.org/dev/peps/pep-0008/?#code-lay-out)
 
 ### Writing Modular Code
+[Video](https://youtu.be/qN6EOyNlSnk)
 - **DRY**: Don't Repeat Yourself - generalize and consolidate repeated code in functions or loops
 - **Abstract out logic to improve readability**: Abstracting out code into a function not only makes it less repetitive, but also improves readability with descriptive function names. Be careful with over-engineering, though.
 - **Minimize the number of entities (functions, classes, modules...)**: Be careful not to create too many modules and having to jump around code.
@@ -36,35 +40,47 @@
 - **Try to use less than 3 arguments per function**: Makes easier to understand. Sometimes, we cannot avoid it.
 
 ### Efficient Code
+[Video](https://youtu.be/LbtxY7xetBw)
 - Run faster
 - Take up less space
 Try to optimize data types and vectorization of your code. Look for standard implementations first, instead of coming up with your own.
 
+### Optimizing: Common Books
+[Video](https://youtu.be/WF9n_19V08g)
 
 ### Documentation
-
+[Video](https://youtu.be/M45B2VbPgjo)
 - Helpful for claryfying complex parts of your code.
 - **In-line comments** - line level
 - **Docstrings** -  module and function level
 - **Project Documentation** - project level
 
 #### In-Line Comments
+[Video](https://youtu.be/-G6yg3Xhl8I)
 - Explain major steps of complex code. Do not explain line by line, nor *what* the code is doing, but *why*. Be careful not to use it to justify bad code.
 
 #### Docstrings
+[Video](https://youtu.be/_gapemxsRJY)
 - Explain the functionality of a module or function. Ideally, every function should have a docstring.
 - [PEP 257](https://www.python.org/dev/peps/pep-0257/)
 - [NumPy Docstrings](https://numpydoc.readthedocs.io/en/latest/format.html)
 
 ### Version Control in Data Science
-
+[Video](https://youtu.be/EQzrLC88Bzk)
+[Scenario#1](https://youtu.be/C92YcuwjZOs)
+[Scenario#2](https://youtu.be/w1iHWpwOkMg)
+[Scenario#3](https://youtu.be/36DOnNzvT4A)
 - [How to Version Control Your Production Machine Learning Models](https://blog.algorithmia.com/how-to-version-control-your-production-machine-learning-models/)
 - [Versioning Data Science](https://shuaiw.github.io/2017/07/30/versioning-data-science.html)
 
+
+
 ### Testing
+[Video](https://youtu.be/IkLUUHt_jis)
 Testing is essential before deployment. Prevents faulty conclusions or errors before they make a significant impact.
 
 ### Testing And Data Science
+[Video](https://youtu.be/AsnstNEMv1c)
 - Problems that occur in DS settings aren't always easy to identify, such as inappropriate usage of features, incorrect encoding, etc.
 - In order to identify such errors, we should check for the quality and accuracy of both our *analysis* and *code*.
 - **TEST DRIVEN DEVELOPMENT (TDD)**: Write tests for tasks before even writing the code to implement those tasks.
@@ -73,6 +89,7 @@ Testing is essential before deployment. Prevents faulty conclusions or errors be
 - Ned Batchelder: Getting Started Testing: [Slide Deck](https://speakerdeck.com/pycon2014/getting-started-testing-by-ned-batchelder) and [Presentation Video](https://www.youtube.com/watch?v=FxSsnHeWQBY)
 
 ### Unit Tests
+[Video](https://youtu.be/wb9jggHEvgI)
 We'd like to test our functions in a repeatable and automated way.
 #### Advantages and Disadvantages of Unit Testing
 - **Advantages**: Unit Tests are isolated from the rest of our program, so no dependencies are involved. No access to databases, APIs or other external sources are required.
@@ -80,6 +97,7 @@ We'd like to test our functions in a repeatable and automated way.
 - [Integration Testing](https://www.fullstackpython.com/integration-testing.html)
 
 ### Unit Testing Tools
+[Video](https://youtu.be/8bKhOyFbX_Y)
 - Use a library, such as ```pytest```. Getting Started [here](https://docs.pytest.org/en/latest/getting-started.html)
   - Create a test file starting with ```test_```
   - Define unit test functions starting with ```test_``` inside the test file
@@ -87,6 +105,7 @@ We'd like to test our functions in a repeatable and automated way.
 - Preferrably, use only one ```assert``` statement per test.
 
 ### Test Driven Development And Data Science
+[Video](https://youtu.be/M-eskssLcQM)
 - **TDD**: Write tests before implementing the functions.
 - Tests can check for different scenarios and edge cases. This way, we can see if our function passes all of the requirements while developing it.
 - When refactoring or adding code, tests help to assure that the rest of the code won't break. Also assures repeatability of code, regardless of external parameters, such as hardware time.
@@ -98,6 +117,7 @@ We'd like to test our functions in a repeatable and automated way.
 - [Testing Your Code](http://docs.python-guide.org/en/latest/writing/tests/) (general Python TDD)
 
 ### Logging
+[Video](https://youtu.be/9qKQdRoIMbU)
 Valuable for understanding the events that occur while running your program.
 
 ### Log Messages
@@ -119,7 +139,7 @@ Valuable for understanding the events that occur while running your program.
 
 
 ### Code Review
-
+[Video](https://youtu.be/zAy1ffMFA-k)
 Benefits the whole team to promote good programming practices and prepare code for production.
 - [Code Review](https://github.com/lyst/MakingLyst/tree/master/code-reviews)
 - [Code Review Best Practices](https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html)
@@ -152,7 +172,7 @@ Benefits the whole team to promote good programming practices and prepare code f
   - Are log messages clear, concise, and professional?
   - Do they include all relevant and useful information?
   - Do they use the appropriate logging level?
-  
+
 ### Tips for Conduction a Code Review
 - Use a code linter
 - Explain issues and make suggestions

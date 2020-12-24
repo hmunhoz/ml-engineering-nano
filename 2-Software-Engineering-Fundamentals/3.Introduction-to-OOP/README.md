@@ -1,12 +1,15 @@
 ## Introduction to Object-Oriented Programming
+[Video](https://youtu.be/5DfFaAl1Wmc)
 
 ### Procedural vs Object-Oriented Programming
+[Video](https://youtu.be/psXD_J8FnCQ)
 - Procedural: "List of actions"
 - Object: In OOP, we model things as objects. Think of objects as things that exist in the real world. These objects are composed by two main things:
   - Characteristics (nouns) &rarr; _attributes_
   - Actions (verbs) &rarr; _methods_
 
 ### Class, object, method, attribute
+[Video](https://youtu.be/yvVMJt09HuA)
 - Class: a _recipe_ for creating an object, consisting methods and attributes. We can have a class that defines a shirt (color, size, model, etc.)
 - Object: an specific instance of a class. In our case, a defined shirt (yellow, medium size, short sleeve, etc.). We could have another shirt object (instance) based on the same class, but with different characteristics (green, small size, long sleeve, etc.)
 - Method: an action that a class or object could take.
@@ -14,6 +17,7 @@
 - Encapsulation: combine functions and data all into a single entity. In object-oriented programming, this single entity is called a class.
 
 ### OOP Syntax
+[Video](https://youtu.be/Y8ZVw1LHI8E)
 ```class ClassName:
   def __init__(self, *args, **kwargs):
     self.arg1 = ...
@@ -22,7 +26,7 @@
 - The ```self``` parameter serves the purpose of differentiating different _objects_ of the same _class_;
 
 ### A couple of notes about OOP
-
+[Video](https://youtu.be/NcgDIWm6iBA)
 #### Set and Get methods
 In python, we can change an object's attribute like this:
   ```
@@ -71,7 +75,14 @@ But there are other interesting topics:
 - [Python decorators](https://realpython.com/primer-on-python-decorators/) - Decorators are a short-hand way for using functions inside other functions
 
 ### Organizing into Modules
+[Video](https://youtu.be/AARS10U5bbo)
 See example at the modularized_code folder.
+
+### Making a package
+[Video](https://youtu.be/Hj2OBr1CGZM)
+
+### Virtual Environments
+[Video](https://youtu.be/f7rzxUiHOJ0)
 
 ### Contributing to a GitHub project
 - [Beginner's Guide to Contributing to a Github Project](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/)
